@@ -1,0 +1,19 @@
+//
+//  ZRNNewsPrefixHeader.pch
+//  ZRNNews
+//
+//  Created by AlexZhang on 13/03/2018.
+//  Copyright © 2018 Jixin. All rights reserved.
+//
+
+#ifndef ZRNNewsPrefixHeader_pch
+#define ZRNNewsPrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import <UIKit/UIKit.h>
+#import <AFNetworking.h>
+#import <React/RCTRootView.h>
+
+#endif /* ZRNNewsPrefixHeader_pch */
