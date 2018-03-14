@@ -1,0 +1,493 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		38F69A9F1E51EE55F34ED730 /* libPods-ZRNNews.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F030DBAED187F12C5313FC3 /* libPods-ZRNNews.a */; };
+		787B5EC920580DF6004B3F4F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 787B5EC820580DF6004B3F4F /* AppDelegate.m */; };
+		787B5ECF20580DF6004B3F4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 787B5ECD20580DF6004B3F4F /* Main.storyboard */; };
+		787B5ED120580DF6004B3F4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 787B5ED020580DF6004B3F4F /* Assets.xcassets */; };
+		787B5ED420580DF6004B3F4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 787B5ED220580DF6004B3F4F /* LaunchScreen.storyboard */; };
+		787B5ED720580DF6004B3F4F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 787B5ED620580DF6004B3F4F /* main.m */; };
+		787B5EE520580F5E004B3F4F /* ZRNNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 787B5EE420580F5E004B3F4F /* ZRNNewsViewController.m */; };
+		787B5EE820580F6F004B3F4F /* ZRNLiveNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 787B5EE720580F6F004B3F4F /* ZRNLiveNewsViewController.m */; };
+		787B5EEB20580F80004B3F4F /* ZRNProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 787B5EEA20580F80004B3F4F /* ZRNProfileViewController.m */; };
+		787B5EEE205813CB004B3F4F /* ZRNNewsTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 787B5EED205813CB004B3F4F /* ZRNNewsTabBarViewController.m */; };
+		787B5F1F2058F413004B3F4F /* index.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 787B5F1E2058F413004B3F4F /* index.jsbundle */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		32EC086C593E8AEE24CD5B7A /* Pods-ZRNNews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZRNNews.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZRNNews/Pods-ZRNNews.release.xcconfig"; sourceTree = "<group>"; };
+		4F030DBAED187F12C5313FC3 /* libPods-ZRNNews.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZRNNews.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		787B5EC420580DF6004B3F4F /* ZRNNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZRNNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		787B5EC720580DF6004B3F4F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		787B5EC820580DF6004B3F4F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		787B5ECE20580DF6004B3F4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		787B5ED020580DF6004B3F4F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		787B5ED320580DF6004B3F4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		787B5ED520580DF6004B3F4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		787B5ED620580DF6004B3F4F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		787B5EE320580F5E004B3F4F /* ZRNNewsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZRNNewsViewController.h; sourceTree = "<group>"; };
+		787B5EE420580F5E004B3F4F /* ZRNNewsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZRNNewsViewController.m; sourceTree = "<group>"; };
+		787B5EE620580F6F004B3F4F /* ZRNLiveNewsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZRNLiveNewsViewController.h; sourceTree = "<group>"; };
+		787B5EE720580F6F004B3F4F /* ZRNLiveNewsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZRNLiveNewsViewController.m; sourceTree = "<group>"; };
+		787B5EE920580F80004B3F4F /* ZRNProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZRNProfileViewController.h; sourceTree = "<group>"; };
+		787B5EEA20580F80004B3F4F /* ZRNProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZRNProfileViewController.m; sourceTree = "<group>"; };
+		787B5EEC205813CB004B3F4F /* ZRNNewsTabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZRNNewsTabBarViewController.h; sourceTree = "<group>"; };
+		787B5EED205813CB004B3F4F /* ZRNNewsTabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZRNNewsTabBarViewController.m; sourceTree = "<group>"; };
+		787B5EFC20582867004B3F4F /* ZRNNewsPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZRNNewsPrefixHeader.pch; sourceTree = "<group>"; };
+		787B5F1E2058F413004B3F4F /* index.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = index.jsbundle; path = React/ios/bundle/index.jsbundle; sourceTree = SOURCE_ROOT; };
+		B3191363159DCB31AF12EE4D /* Pods-ZRNNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZRNNews.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZRNNews/Pods-ZRNNews.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		787B5EC120580DF6004B3F4F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38F69A9F1E51EE55F34ED730 /* libPods-ZRNNews.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		76EA234D230B1E85B785FAC7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B3191363159DCB31AF12EE4D /* Pods-ZRNNews.debug.xcconfig */,
+				32EC086C593E8AEE24CD5B7A /* Pods-ZRNNews.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		787B5EBB20580DF6004B3F4F = {
+			isa = PBXGroup;
+			children = (
+				787B5EC620580DF6004B3F4F /* ZRNNews */,
+				787B5EC520580DF6004B3F4F /* Products */,
+				76EA234D230B1E85B785FAC7 /* Pods */,
+				E46C0179EB3F8F6145720378 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		787B5EC520580DF6004B3F4F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				787B5EC420580DF6004B3F4F /* ZRNNews.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		787B5EC620580DF6004B3F4F /* ZRNNews */ = {
+			isa = PBXGroup;
+			children = (
+				787B5EEF20581579004B3F4F /* Resource */,
+				787B5EDD20580F44004B3F4F /* LiveNews */,
+				787B5EE120580F44004B3F4F /* News */,
+				787B5EDF20580F44004B3F4F /* Profile */,
+				787B5EC720580DF6004B3F4F /* AppDelegate.h */,
+				787B5EC820580DF6004B3F4F /* AppDelegate.m */,
+				787B5EEC205813CB004B3F4F /* ZRNNewsTabBarViewController.h */,
+				787B5EED205813CB004B3F4F /* ZRNNewsTabBarViewController.m */,
+				787B5ED520580DF6004B3F4F /* Info.plist */,
+				787B5ED620580DF6004B3F4F /* main.m */,
+				787B5EFC20582867004B3F4F /* ZRNNewsPrefixHeader.pch */,
+			);
+			path = ZRNNews;
+			sourceTree = "<group>";
+		};
+		787B5EDD20580F44004B3F4F /* LiveNews */ = {
+			isa = PBXGroup;
+			children = (
+				787B5EDE20580F44004B3F4F /* Controller */,
+			);
+			path = LiveNews;
+			sourceTree = "<group>";
+		};
+		787B5EDE20580F44004B3F4F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				787B5EE620580F6F004B3F4F /* ZRNLiveNewsViewController.h */,
+				787B5EE720580F6F004B3F4F /* ZRNLiveNewsViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		787B5EDF20580F44004B3F4F /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				787B5EE020580F44004B3F4F /* Controller */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		787B5EE020580F44004B3F4F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				787B5EE920580F80004B3F4F /* ZRNProfileViewController.h */,
+				787B5EEA20580F80004B3F4F /* ZRNProfileViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		787B5EE120580F44004B3F4F /* News */ = {
+			isa = PBXGroup;
+			children = (
+				787B5EE220580F44004B3F4F /* Controller */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		787B5EE220580F44004B3F4F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				787B5EE320580F5E004B3F4F /* ZRNNewsViewController.h */,
+				787B5EE420580F5E004B3F4F /* ZRNNewsViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		787B5EEF20581579004B3F4F /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				787B5F1E2058F413004B3F4F /* index.jsbundle */,
+				787B5ECD20580DF6004B3F4F /* Main.storyboard */,
+				787B5ED020580DF6004B3F4F /* Assets.xcassets */,
+				787B5ED220580DF6004B3F4F /* LaunchScreen.storyboard */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		E46C0179EB3F8F6145720378 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4F030DBAED187F12C5313FC3 /* libPods-ZRNNews.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		787B5EC320580DF6004B3F4F /* ZRNNews */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 787B5EDA20580DF6004B3F4F /* Build configuration list for PBXNativeTarget "ZRNNews" */;
+			buildPhases = (
+				E87C1E9B3F8FE149DA4BF909 /* [CP] Check Pods Manifest.lock */,
+				787B5EC020580DF6004B3F4F /* Sources */,
+				787B5EC120580DF6004B3F4F /* Frameworks */,
+				787B5EC220580DF6004B3F4F /* Resources */,
+				BDC8FB43A5A300789FB5CACE /* [CP] Embed Pods Frameworks */,
+				E74C94C821D228767B459B25 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZRNNews;
+			productName = ZRNNews;
+			productReference = 787B5EC420580DF6004B3F4F /* ZRNNews.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		787B5EBC20580DF6004B3F4F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = Jixin;
+				TargetAttributes = {
+					787B5EC320580DF6004B3F4F = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 787B5EBF20580DF6004B3F4F /* Build configuration list for PBXProject "ZRNNews" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 787B5EBB20580DF6004B3F4F;
+			productRefGroup = 787B5EC520580DF6004B3F4F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				787B5EC320580DF6004B3F4F /* ZRNNews */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		787B5EC220580DF6004B3F4F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				787B5ED420580DF6004B3F4F /* LaunchScreen.storyboard in Resources */,
+				787B5ED120580DF6004B3F4F /* Assets.xcassets in Resources */,
+				787B5ECF20580DF6004B3F4F /* Main.storyboard in Resources */,
+				787B5F1F2058F413004B3F4F /* index.jsbundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BDC8FB43A5A300789FB5CACE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZRNNews/Pods-ZRNNews-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E74C94C821D228767B459B25 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZRNNews/Pods-ZRNNews-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E87C1E9B3F8FE149DA4BF909 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZRNNews-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		787B5EC020580DF6004B3F4F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				787B5EEE205813CB004B3F4F /* ZRNNewsTabBarViewController.m in Sources */,
+				787B5EE520580F5E004B3F4F /* ZRNNewsViewController.m in Sources */,
+				787B5EEB20580F80004B3F4F /* ZRNProfileViewController.m in Sources */,
+				787B5EE820580F6F004B3F4F /* ZRNLiveNewsViewController.m in Sources */,
+				787B5ED720580DF6004B3F4F /* main.m in Sources */,
+				787B5EC920580DF6004B3F4F /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		787B5ECD20580DF6004B3F4F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				787B5ECE20580DF6004B3F4F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		787B5ED220580DF6004B3F4F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				787B5ED320580DF6004B3F4F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		787B5ED820580DF6004B3F4F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		787B5ED920580DF6004B3F4F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		787B5EDB20580DF6004B3F4F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3191363159DCB31AF12EE4D /* Pods-ZRNNews.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 49FUNDNGC6;
+				GCC_PREFIX_HEADER = ZRNNews/ZRNNewsPrefixHeader.pch;
+				INFOPLIST_FILE = ZRNNews/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Jixin.com.ZRNNews;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		787B5EDC20580DF6004B3F4F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32EC086C593E8AEE24CD5B7A /* Pods-ZRNNews.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 49FUNDNGC6;
+				GCC_PREFIX_HEADER = ZRNNews/ZRNNewsPrefixHeader.pch;
+				INFOPLIST_FILE = ZRNNews/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Jixin.com.ZRNNews;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		787B5EBF20580DF6004B3F4F /* Build configuration list for PBXProject "ZRNNews" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				787B5ED820580DF6004B3F4F /* Debug */,
+				787B5ED920580DF6004B3F4F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		787B5EDA20580DF6004B3F4F /* Build configuration list for PBXNativeTarget "ZRNNews" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				787B5EDB20580DF6004B3F4F /* Debug */,
+				787B5EDC20580DF6004B3F4F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 787B5EBC20580DF6004B3F4F /* Project object */;
+}
