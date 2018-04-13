@@ -1,8 +1,11 @@
 import React, { Component, PropTypes } from 'react';
+import DateUtil from '../Utils/utils';
 import { FlatList, SectionList, StyleSheet, ScrollView, Image, Text, View, NavigatorIOS, Dimensions } from 'react-native';
 
 const kScreenWidth = Dimensions.get('window').width;
 const kScreenHeight = Dimensions.get('window').height;
+const kNavigationHeight = kScreenHeight == 815 ? 88 : 64;
+const kStatuesbarHeight = kScreenHeight == 815 ? 44 : 20;
 
 export default class ZNewsList extends Component {
     constructor(props) {
@@ -91,9 +94,9 @@ export default class ZNewsList extends Component {
           <FlatList 
           data = {newsList}
           renderItem={({item}) => 
-            <View style={styles.item}>
+            <View style={styles.item_type_news}>
               <Text style={styles.item_title}>{item.resource.title}</Text>
-              <Text style={styles.item_subtitle}>{item.resource.display_time}</Text>
+              <Text style={styles.item_subtitle}>{DateUtil.formatDate(item.resource.display_time * 1000,null)}</Text>
               <Image style={styles.item_image} source={{uri: item.resource.image_uri + '?imageView2/1/h/150/w/200/q/100'}}/>
             </View>
           }
@@ -117,15 +120,23 @@ const styles = StyleSheet.create({
       flexDirection: 'row',
       alignItems: 'center',
       justifyContent: 'center',
-      marginTop: 88,
+      marginTop: 64,
       flex: 1,
-      paddingTop: 22,
+      paddingTop: 0,
     },
-    item: {
+    item_type_news: {
       flexDirection: 'column',
       justifyContent: 'flex-start',
       alignItems: 'flex-start',
       height: 114,
+      borderColor: 'gray', 
+      flex: 1,
+    },
+    item_type_article: {
+      flexDirection: 'column',
+      justifyContent: 'flex-start',
+      alignItems: 'flex-start',
+      height: 144,
       borderColor: 'gray', 
       flex: 1,
     },

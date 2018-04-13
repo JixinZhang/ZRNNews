@@ -19,10 +19,10 @@
     self.title = @"Profile";
     self.view.backgroundColor = [UIColor whiteColor];
     
-    NSURL *jsCodeLocation = [NSURL URLWithString:@"http://localhost:8081/index.bundle?platform=ios"];
-    //    NSURL *jsCodeLocation = [[NSBundle mainBundle] URLForResource:@"index" withExtension:@"jsbundle"];
+//    NSURL *jsCodeLocation = [NSURL URLWithString:@"http://localhost:8081/index.bundle?platform=ios"];
+    NSURL *jsCodeLocation = [[NSBundle mainBundle] URLForResource:@"my" withExtension:@"jsbundle"];
     
-    RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation moduleName:@"ZRNProfile" initialProperties:nil launchOptions:nil];
+    RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation moduleName:@"my" initialProperties:nil launchOptions:nil];
     self.view = rootView;
 
 }

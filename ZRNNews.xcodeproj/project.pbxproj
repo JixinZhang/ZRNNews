@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		38F69A9F1E51EE55F34ED730 /* libPods-ZRNNews.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F030DBAED187F12C5313FC3 /* libPods-ZRNNews.a */; };
+		785D0EFB206F6DCA00AEA46F /* my.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 785D0EF9206F6C7F00AEA46F /* my.jsbundle */; };
 		787B5EC920580DF6004B3F4F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 787B5EC820580DF6004B3F4F /* AppDelegate.m */; };
 		787B5ECF20580DF6004B3F4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 787B5ECD20580DF6004B3F4F /* Main.storyboard */; };
 		787B5ED120580DF6004B3F4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 787B5ED020580DF6004B3F4F /* Assets.xcassets */; };
@@ -17,12 +18,12 @@
 		787B5EE820580F6F004B3F4F /* ZRNLiveNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 787B5EE720580F6F004B3F4F /* ZRNLiveNewsViewController.m */; };
 		787B5EEB20580F80004B3F4F /* ZRNProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 787B5EEA20580F80004B3F4F /* ZRNProfileViewController.m */; };
 		787B5EEE205813CB004B3F4F /* ZRNNewsTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 787B5EED205813CB004B3F4F /* ZRNNewsTabBarViewController.m */; };
-		787B5F1F2058F413004B3F4F /* index.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 787B5F1E2058F413004B3F4F /* index.jsbundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		32EC086C593E8AEE24CD5B7A /* Pods-ZRNNews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZRNNews.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZRNNews/Pods-ZRNNews.release.xcconfig"; sourceTree = "<group>"; };
 		4F030DBAED187F12C5313FC3 /* libPods-ZRNNews.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZRNNews.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		785D0EF9206F6C7F00AEA46F /* my.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = my.jsbundle; sourceTree = "<group>"; };
 		787B5EC420580DF6004B3F4F /* ZRNNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZRNNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		787B5EC720580DF6004B3F4F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		787B5EC820580DF6004B3F4F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -155,6 +156,7 @@
 		787B5EEF20581579004B3F4F /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				785D0EF9206F6C7F00AEA46F /* my.jsbundle */,
 				787B5F1E2058F413004B3F4F /* index.jsbundle */,
 				787B5ECD20580DF6004B3F4F /* Main.storyboard */,
 				787B5ED020580DF6004B3F4F /* Assets.xcassets */,
@@ -234,8 +236,8 @@
 			files = (
 				787B5ED420580DF6004B3F4F /* LaunchScreen.storyboard in Resources */,
 				787B5ED120580DF6004B3F4F /* Assets.xcassets in Resources */,
+				785D0EFB206F6DCA00AEA46F /* my.jsbundle in Resources */,
 				787B5ECF20580DF6004B3F4F /* Main.storyboard in Resources */,
-				787B5F1F2058F413004B3F4F /* index.jsbundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
