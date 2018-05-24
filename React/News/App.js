@@ -1,11 +1,16 @@
 import React, { Component, PropTypes } from 'react';
 import DateUtil from '../Utils/utils';
-import { FlatList, SectionList, StyleSheet, ScrollView, Image, Text, View, NavigatorIOS, Dimensions } from 'react-native';
+import { FlatList, SectionList, StyleSheet, ScrollView, Image, Text, View, NavigatorIOS, Dimensions, TouchableOpacity } from 'react-native';
 
 const kScreenWidth = Dimensions.get('window').width;
 const kScreenHeight = Dimensions.get('window').height;
 const kNavigationHeight = kScreenHeight == 815 ? 88 : 64;
 const kStatuesbarHeight = kScreenHeight == 815 ? 44 : 20;
+
+var {
+  NativeModules
+} = require('react-native');
+var RNBridgeModule = NativeModules.RNBridgeModule;
 
 export default class ZNewsList extends Component {
     constructor(props) {
@@ -93,12 +98,14 @@ export default class ZNewsList extends Component {
         <View style={styles.container}>
           <FlatList 
           data = {newsList}
-          renderItem={({item}) => 
-            <View style={styles.item_type_news}>
-              <Text style={styles.item_title}>{item.resource.title}</Text>
-              <Text style={styles.item_subtitle}>{DateUtil.formatDate(item.resource.display_time * 1000,null)}</Text>
-              <Image style={styles.item_image} source={{uri: item.resource.image_uri + '?imageView2/1/h/150/w/200/q/100'}}/>
-            </View>
+          renderItem={({item, index}) => 
+            <TouchableOpacity onPress={() => this._flatListOnPress(item)}>
+              <View style={styles.item_type_news}>
+                <Text style={styles.item_title}>{item.resource.title}</Text>
+                <Text style={styles.item_subtitle}>{DateUtil.formatDate(item.resource.display_time * 1000,null)}</Text>
+                <Image style={styles.item_image} source={{uri: item.resource.image_uri + '?imageView2/1/h/150/w/200/q/100'}}/>
+              </View>
+            </TouchableOpacity>
           }
           onEndReached={this.renderOnEndReached}
           onEndReachedThreshold={0.5}
@@ -111,8 +118,13 @@ export default class ZNewsList extends Component {
     }
 
     _renderItemSeparatorComponent = ({highlighted}) => (
-      <View style={{ height:0.5, backgroundColor:'#E6E6E6' }}></View>
-  );
+        <View style={{ height:0.5, backgroundColor:'#E6E6E6' }}></View>
+    );
+
+    _flatListOnPress = (item) => {
+      console.log(item)
+      RNBridgeModule.OpenNewsDetail(item.resource.uri)
+    };
 }
 
 const styles = StyleSheet.create({
@@ -120,7 +132,7 @@ const styles = StyleSheet.create({
       flexDirection: 'row',
       alignItems: 'center',
       justifyContent: 'center',
-      marginTop: 64,
+      marginTop: kNavigationHeight,
       flex: 1,
       paddingTop: 0,
     },

@@ -123,7 +123,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    marginTop: 88,
+    marginTop: kNavigationHeight,
     flex: 1,
     paddingTop: 0,
     // backgroundColor: '#f2f2f2'

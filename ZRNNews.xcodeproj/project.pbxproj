@@ -18,6 +18,9 @@
 		787B5EE820580F6F004B3F4F /* ZRNLiveNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 787B5EE720580F6F004B3F4F /* ZRNLiveNewsViewController.m */; };
 		787B5EEB20580F80004B3F4F /* ZRNProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 787B5EEA20580F80004B3F4F /* ZRNProfileViewController.m */; };
 		787B5EEE205813CB004B3F4F /* ZRNNewsTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 787B5EED205813CB004B3F4F /* ZRNNewsTabBarViewController.m */; };
+		7887D73F20B6DB4D009F2015 /* RNBridgeModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 7887D73E20B6DB4D009F2015 /* RNBridgeModule.m */; };
+		7887D74520B6F081009F2015 /* ZRNDefaultWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7887D74420B6F081009F2015 /* ZRNDefaultWebViewController.m */; };
+		7887D74620B6F663009F2015 /* index.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 787B5F1E2058F413004B3F4F /* index.jsbundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,10 @@
 		787B5EED205813CB004B3F4F /* ZRNNewsTabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZRNNewsTabBarViewController.m; sourceTree = "<group>"; };
 		787B5EFC20582867004B3F4F /* ZRNNewsPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZRNNewsPrefixHeader.pch; sourceTree = "<group>"; };
 		787B5F1E2058F413004B3F4F /* index.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = index.jsbundle; path = React/ios/bundle/index.jsbundle; sourceTree = SOURCE_ROOT; };
+		7887D73D20B6DB4D009F2015 /* RNBridgeModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNBridgeModule.h; sourceTree = "<group>"; };
+		7887D73E20B6DB4D009F2015 /* RNBridgeModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNBridgeModule.m; sourceTree = "<group>"; };
+		7887D74320B6F081009F2015 /* ZRNDefaultWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRNDefaultWebViewController.h; sourceTree = "<group>"; };
+		7887D74420B6F081009F2015 /* ZRNDefaultWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRNDefaultWebViewController.m; sourceTree = "<group>"; };
 		B3191363159DCB31AF12EE4D /* Pods-ZRNNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZRNNews.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZRNNews/Pods-ZRNNews.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -95,6 +102,10 @@
 				787B5EC820580DF6004B3F4F /* AppDelegate.m */,
 				787B5EEC205813CB004B3F4F /* ZRNNewsTabBarViewController.h */,
 				787B5EED205813CB004B3F4F /* ZRNNewsTabBarViewController.m */,
+				7887D74320B6F081009F2015 /* ZRNDefaultWebViewController.h */,
+				7887D74420B6F081009F2015 /* ZRNDefaultWebViewController.m */,
+				7887D73D20B6DB4D009F2015 /* RNBridgeModule.h */,
+				7887D73E20B6DB4D009F2015 /* RNBridgeModule.m */,
 				787B5ED520580DF6004B3F4F /* Info.plist */,
 				787B5ED620580DF6004B3F4F /* main.m */,
 				787B5EFC20582867004B3F4F /* ZRNNewsPrefixHeader.pch */,
@@ -235,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				787B5ED420580DF6004B3F4F /* LaunchScreen.storyboard in Resources */,
+				7887D74620B6F663009F2015 /* index.jsbundle in Resources */,
 				787B5ED120580DF6004B3F4F /* Assets.xcassets in Resources */,
 				785D0EFB206F6DCA00AEA46F /* my.jsbundle in Resources */,
 				787B5ECF20580DF6004B3F4F /* Main.storyboard in Resources */,
@@ -299,9 +311,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7887D73F20B6DB4D009F2015 /* RNBridgeModule.m in Sources */,
 				787B5EEE205813CB004B3F4F /* ZRNNewsTabBarViewController.m in Sources */,
 				787B5EE520580F5E004B3F4F /* ZRNNewsViewController.m in Sources */,
 				787B5EEB20580F80004B3F4F /* ZRNProfileViewController.m in Sources */,
+				7887D74520B6F081009F2015 /* ZRNDefaultWebViewController.m in Sources */,
 				787B5EE820580F6F004B3F4F /* ZRNLiveNewsViewController.m in Sources */,
 				787B5ED720580DF6004B3F4F /* main.m in Sources */,
 				787B5EC920580DF6004B3F4F /* AppDelegate.m in Sources */,
