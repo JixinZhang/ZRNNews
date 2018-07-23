@@ -15,5 +15,6 @@
 #import <UIKit/UIKit.h>
 #import <AFNetworking.h>
 #import <React/RCTRootView.h>
+#import "ZRNNewsDefine.h"
 
 #endif /* ZRNNewsPrefixHeader_pch */

@@ -4,8 +4,8 @@ import { FlatList, SectionList, StyleSheet, ScrollView, Image, Text, View, Navig
 
 const kScreenWidth = Dimensions.get('window').width;
 const kScreenHeight = Dimensions.get('window').height;
-const kNavigationHeight = kScreenHeight == 815 ? 88 : 64;
-const kStatuesbarHeight = kScreenHeight == 815 ? 44 : 20;
+const kNavigationHeight = (kScreenHeight == 815 ? 88 : 64);
+const kStatuesbarHeight = (kScreenHeight == 815 ? 44 : 20);
 
 var {
   NativeModules
@@ -101,8 +101,8 @@ export default class ZNewsList extends Component {
           renderItem={({item, index}) => 
             <TouchableOpacity onPress={() => this._flatListOnPress(item)}>
               <View style={styles.item_type_news}>
-                <Text style={styles.item_title}>{item.resource.title}</Text>
-                <Text style={styles.item_subtitle}>{DateUtil.formatDate(item.resource.display_time * 1000,null)}</Text>
+                <Text style={styles.item_title} numberOfLines={2}>{item.resource.title}</Text>
+                <Text style={styles.item_subtitle}>{item.resource.author.display_name} | {DateUtil.formatDate(item.resource.display_time * 1000,null)}</Text>
                 <Image style={styles.item_image} source={{uri: item.resource.image_uri + '?imageView2/1/h/150/w/200/q/100'}}/>
               </View>
             </TouchableOpacity>
@@ -132,7 +132,8 @@ const styles = StyleSheet.create({
       flexDirection: 'row',
       alignItems: 'center',
       justifyContent: 'center',
-      marginTop: kNavigationHeight,
+      marginTop: 0,
+      marginBottom: 0,
       flex: 1,
       paddingTop: 0,
     },
@@ -166,7 +167,7 @@ const styles = StyleSheet.create({
     item_subtitle: {
       fontSize: 12,
       color: '#666',
-      paddingRight: 100,
+      paddingRight: 10,
       marginLeft: 15,
       bottom: -5,
       width: kScreenWidth - 15 - 10 - 100 - 15,

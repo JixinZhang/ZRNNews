@@ -9,17 +9,6 @@
 #import "ZRNDefaultWebViewController.h"
 #import <WebKit/WebKit.h>
 
-#define kScreenWidth [UIScreen mainScreen].bounds.size.width
-#define kScreenHeight [UIScreen mainScreen].bounds.size.height
-
-#define kDevice_Is_iPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
-
-#define KNavHeight          (kDevice_Is_iPhoneX ? 88.0 : 64.0)
-#define KtabBarHeight       (kDevice_Is_iPhoneX ? 83.0 : 49.0)
-#define KStatusBarHeight    (kDevice_Is_iPhoneX ? 44.0 : 20.0)
-#define KBottomMargin    (kDevice_Is_iPhoneX ? 34.0 : 0)
-
-
 @interface ZRNDefaultWebViewController ()<WKUIDelegate,WKNavigationDelegate>
 
 @property (nonatomic, strong) WKWebView *wkWebView;
@@ -56,7 +45,13 @@
  */
 
 - (void)dealloc {
-  [self.wkWebView removeObserver:self forKeyPath:@"estimatedProgress"];
+    @try {
+        [self.wkWebView removeObserver:self forKeyPath:@"estimatedProgress"];
+    } @catch(NSException *exception) {
+        
+    } @finally{
+        
+    }
 }
 
 - (void)viewDidLoad {
@@ -167,6 +162,7 @@
   NSLog(@"加载完成");
   //加载完成后隐藏progressView
   //    self.progressView.hidden = YES;
+    self.title = webView.title;
 }
 
 //加载失败

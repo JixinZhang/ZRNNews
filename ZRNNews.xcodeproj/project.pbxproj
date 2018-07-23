@@ -26,6 +26,7 @@
 /* Begin PBXFileReference section */
 		32EC086C593E8AEE24CD5B7A /* Pods-ZRNNews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZRNNews.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZRNNews/Pods-ZRNNews.release.xcconfig"; sourceTree = "<group>"; };
 		4F030DBAED187F12C5313FC3 /* libPods-ZRNNews.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZRNNews.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		785200792105BDF50056BEC4 /* ZRNNewsDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZRNNewsDefine.h; sourceTree = "<group>"; };
 		785D0EF9206F6C7F00AEA46F /* my.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = my.jsbundle; sourceTree = "<group>"; };
 		787B5EC420580DF6004B3F4F /* ZRNNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZRNNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		787B5EC720580DF6004B3F4F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -109,6 +110,7 @@
 				787B5ED520580DF6004B3F4F /* Info.plist */,
 				787B5ED620580DF6004B3F4F /* main.m */,
 				787B5EFC20582867004B3F4F /* ZRNNewsPrefixHeader.pch */,
+				785200792105BDF50056BEC4 /* ZRNNewsDefine.h */,
 			);
 			path = ZRNNews;
 			sourceTree = "<group>";

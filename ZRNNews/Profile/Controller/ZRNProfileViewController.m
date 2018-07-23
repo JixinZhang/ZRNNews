@@ -16,14 +16,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"Profile";
     self.view.backgroundColor = [UIColor whiteColor];
     
 //    NSURL *jsCodeLocation = [NSURL URLWithString:@"http://localhost:8081/index.bundle?platform=ios"];
-    NSURL *jsCodeLocation = [[NSBundle mainBundle] URLForResource:@"my" withExtension:@"jsbundle"];
-    
-    RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation moduleName:@"my" initialProperties:nil launchOptions:nil];
-    self.view = rootView;
+//    NSURL *jsCodeLocation = [[NSBundle mainBundle] URLForResource:@"my" withExtension:@"jsbundle"];
+//    
+//    RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation moduleName:@"my" initialProperties:nil launchOptions:nil];
+//    self.view = rootView;
 
 }
 

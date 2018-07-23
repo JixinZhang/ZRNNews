@@ -1,11 +1,16 @@
 import React, { Component, PropTypes } from 'react';
-import { FlatList, SectionList, StyleSheet, ScrollView, Image, Text, View, NavigatorIOS, Dimensions } from 'react-native';
+import { FlatList, SectionList, StyleSheet, ScrollView, Image, Text, View, NavigatorIOS, Dimensions, TouchableOpacity } from 'react-native';
 import DateUtil from '../Utils/utils';
 
 const kScreenWidth = Dimensions.get('window').width;
 const kScreenHeight = Dimensions.get('window').height;
 const kNavigationHeight = kScreenHeight == 815 ? 88 : 64;
 const kStatuesbarHeight = kScreenHeight == 815 ? 44 : 20;
+
+var {
+  NativeModules
+} = require('react-native');
+var RNBridgeModule = NativeModules.RNBridgeModule;
 
 export default class ZNewsList extends Component {
     constructor(props) {
@@ -96,12 +101,14 @@ export default class ZNewsList extends Component {
         <View style={styles.container}>
           <FlatList 
           data = {newsList}
-          renderItem={({item}) => 
-            <View style={styles.item}>
-              <Text style={styles.item_title}>{item.content_text}</Text>
+          renderItem={({item, index}) => 
+            <TouchableOpacity onPress={() => this._flatListOnPress(item)}>
+              <View style={styles.item}>
+              <Text style={styles.item_title} numberOfLines={3}>{item.content_text}</Text>
               <Text style={styles.item_subtitle}>{DateUtil.formatDate(item.display_time * 1000,'hh:mm')}</Text>
               {/* <Image style={styles.item_image} source={{uri: item.resource.image_uri + '?imageView2/1/h/150/w/200/q/100'}}/> */}
-            </View>
+              </View>  
+            </TouchableOpacity>
           }
           onEndReached={this.renderOnEndReached}
           onEndReachedThreshold={0.5}
@@ -113,9 +120,15 @@ export default class ZNewsList extends Component {
       );
     }
 
-    _renderItemSeparatorComponent = ({highlighted}) => (
+  _renderItemSeparatorComponent = ({highlighted}) => (
       <View style={{ height:0.5, backgroundColor:'#E6E6E6' }}></View>
   );
+
+  _flatListOnPress = (item) => {
+    console.log(item)
+    var url = 'https://m.wallstreetcn.com/livenews/' + item.id
+    RNBridgeModule.OpenNewsDetail(url)
+  };
 }
 
 const styles = StyleSheet.create({
@@ -138,7 +151,7 @@ const styles = StyleSheet.create({
   },
   item_title: {
     fontSize: 16,
-    lineHeight: 21,
+    lineHeight: 24,
     color: '#333333',
     marginLeft: 15,
     marginTop: 20,
@@ -146,8 +159,8 @@ const styles = StyleSheet.create({
     paddingRight: 0,
     left: 40,
     width: kScreenWidth - 40 - 15 - 15,
-    height: 60,
-    maxHeight: 60,
+    height: 90,
+    maxHeight: 100,
   },
   item_subtitle: {
     fontSize: 13,
