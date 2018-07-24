@@ -10,6 +10,8 @@
 
 @interface ZRNLiveNewsViewController ()
 
+@property (nonatomic, strong) UIView *contentView;
+
 @end
 
 @implementation ZRNLiveNewsViewController
@@ -23,8 +25,8 @@
 //    NSURL *jsCodeLocation = [[NSBundle mainBundle] URLForResource:@"index" withExtension:@"jsbundle"];
     
     RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation moduleName:@"ZRNLiveNews" initialProperties:nil launchOptions:nil];
-    self.view = rootView;
-
+    self.contentView = rootView;
+    [self.view addSubview:self.contentView];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -32,14 +34,16 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (UIView *)contentView {
+    if (!_contentView) {
+        _contentView = [[UIView alloc] initWithFrame:CGRectMake(0, KNavHeight, kScreenWidth, kScreenHeight - KNavHeight - KtabBarHeight)];
+    }
+    return _contentView;
 }
-*/
+
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    self.contentView.frame = CGRectMake(0, KNavHeight, kScreenWidth, kScreenHeight - KNavHeight - KtabBarHeight);
+}
 
 @end

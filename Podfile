@@ -23,6 +23,9 @@ target 'ZRNNews' do
     'RCTWebSocket',
     'DevSupport',
     ]
+    
+#    rn_text_size = 'React/node_modules/react-native-text-size/ios'
+#    pod 'RNMeasureText', path: rn_text_size
 
 #    pod 'react-native-maps', path: rn_maps_path
 
