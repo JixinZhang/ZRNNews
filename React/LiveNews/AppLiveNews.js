@@ -181,7 +181,7 @@ const styles = StyleSheet.create({
     color: '#999',
     left: - kScreenWidth + 50,
     top: 13,
-    width: 35,
+    width: 45,
     height: 40,
   },
   item_title_color_red: {

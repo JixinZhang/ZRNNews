@@ -39,7 +39,7 @@
                          @[@"快讯",@"live_day_normal",@"live_day_pressed",@"live_night_normal",@"live_night_pressed"],
 //                         @[@"精选",@"worth_day_normal",@"worth_day_pressed",@"worth_night_normal",@"worth_night_pressed"],
 //                         @[@"行情",@"quote_day_normal",@"quote_day_pressed",@"quote_night_normal",@"quote_night_pressed"],
-                         @[@"我的",@"my_day_normal",@"my_day_pressed",@"my_night_normal",@"my_night_pressed"]
+//                         @[@"我的",@"my_day_normal",@"my_day_pressed",@"my_night_normal",@"my_night_pressed"]
                          ];
 }
 
@@ -60,7 +60,7 @@
     
     self.viewControllers = @[newsRootVC,
                              liveRootVC,
-                             profileRootVC
+//                             profileRootVC
                              ];
     
     for (int i = 0; i < [self.tabBarArray count]; i ++)
