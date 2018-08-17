@@ -1,6 +1,18 @@
 import React, { Component, PropTypes } from 'react';
 import DateUtil from '../Utils/utils';
-import { FlatList, SectionList, StyleSheet, ScrollView, Image, Text, View, NavigatorIOS, Dimensions, TouchableOpacity } from 'react-native';
+import { 
+  FlatList, 
+  SectionList, 
+  StyleSheet, 
+  ScrollView, 
+  Image, 
+  Text, 
+  View, 
+  NavigatorIOS,
+  Dimensions, 
+  TouchableOpacity 
+} from 'react-native';
+import Swiper from 'react-native-swiper';
 
 const kScreenWidth = Dimensions.get('window').width;
 const kScreenHeight = Dimensions.get('window').height;
@@ -17,6 +29,7 @@ export default class ZNewsList extends Component {
       super(props);
       this.state = {
         newsList: [],
+        carouselList: [],
         refreshing: false,
         next_cursor: '',
       };
@@ -27,9 +40,7 @@ export default class ZNewsList extends Component {
         }
 
         var items = this.state.newsList;
-        return this.renderNewsList(items);
-
-        
+        return this.renderNewsList(items);   
     }
 
     getNewsListFromApi(next_cursor) {
@@ -48,7 +59,6 @@ export default class ZNewsList extends Component {
                 newsList:items,
                 refreshing: false,
                 next_cursor: responseData.data.next_cursor,
-
             });
             console.log(responseData);
         })
@@ -60,7 +70,32 @@ export default class ZNewsList extends Component {
         });
     }
 
+    getCarouselListFromApi() {
+      var url = 'http://api-prod.wallstreetcn.com/apiv1/content/fabricate-articles?limit=5&channel=global&accept=article';
+      fetch(url, {
+        method: 'GET'
+      })
+      .then((response) => response.json())
+      .then((responseData) => {
+          var items
+          for (let index = 0; index < responseData.data.items.length; index++){
+            var element = responseData.data.items[index];
+            items.push(element)
+          }
+          this.state({
+            carouselList:items,
+          })
+      })
+      .catch((error) => {
+        this.state({
+          refreshing:false
+        });
+        console.error(error);
+      })
+    }
+
     componentDidMount() {
+      this.getCarouselListFromApi();
       this.getNewsListFromApi('');
     }
 
@@ -68,13 +103,7 @@ export default class ZNewsList extends Component {
       this.setState({
         refreshing:true
       });
-
-      // setTimeout(() => {
-      //   console.log('No more data!');
-      //   refreshing.setState({
-      //     refreshing:false
-      //   });
-      // }, 30000);
+      this.getCarouselListFromApi();
       this.getNewsListFromApi();
     }
     renderOnEndReached = () => {
@@ -96,7 +125,7 @@ export default class ZNewsList extends Component {
     renderNewsList(newsList) {
       return(
         <View style={styles.container}>
-          <FlatList 
+          <FlatList style={styles.news_list}
           data = {newsList}
           renderItem={({item, index}) => 
             <TouchableOpacity onPress={() => this._flatListOnPress(item)}>
@@ -112,6 +141,7 @@ export default class ZNewsList extends Component {
           ItemSeparatorComponent={this._renderItemSeparatorComponent}
           onRefresh={this.renderRefresh}
           refreshing={this.state.refreshing}
+          ListHeaderComponent={this._headerComponent}
           />
         </View>
       );
@@ -125,17 +155,58 @@ export default class ZNewsList extends Component {
       console.log(item)
       RNBridgeModule.OpenNewsDetail(item.resource.uri)
     };
+
+    _headerComponent= () => {
+      if (this.state.newsList.length) {
+        return(
+          <View>
+              <Swiper 
+              style={styles.swiper} 
+              showsButtons={false} 
+              autoplay={true}
+              dotStyle={styles.swiper_dot}
+              activeDotStyle={styles.swiper_activeDot} 
+              removeClippedSubviews={false}
+              >
+                {this._swiperSubview()}
+              </Swiper>
+          </View>
+        )
+      } else {
+        return(
+          <View></View>
+        )
+      }};
+
+      _swiperSubview() {
+        var viewArr = [];
+        for (var index = 0; index < 5; index++) {
+          let item = this.state.newsList[index];
+            viewArr.push(
+              <TouchableOpacity onPress={() => this._flatListOnPress(item)}>
+                <View style={styles.slide}>
+                  <Image style={styles.slide_image} source={{uri: item.resource.image_uri + '?imageView2/1/h/750/w/430/q/100'}}/>
+                  <Text style={styles.slide_title}>{item.resource.title}</Text>
+                </View>
+              </TouchableOpacity>
+            );
+        }
+        return viewArr;
+      }
 }
 
 const styles = StyleSheet.create({
     container: {
-      flexDirection: 'row',
-      alignItems: 'center',
-      justifyContent: 'center',
+      flexDirection: 'column',
+      justifyContent: 'flex-start',
+      alignItems: 'flex-start',
       marginTop: 0,
       marginBottom: 0,
       flex: 1,
       paddingTop: 0,
+    },
+    news_list: {
+
     },
     item_type_news: {
       flexDirection: 'column',
@@ -178,5 +249,42 @@ const styles = StyleSheet.create({
       marginTop: -70,
       width: 100,
       height: 75,
+    },
+    swiper:{
+      height: 180,
+      backgroundColor: '#FFFFFF',
+    },
+    swiper_dot: {
+      backgroundColor:'#E6E6E6', 
+      width: 6, 
+      height: 6,
+      top: 35,
+    },
+    swiper_activeDot: {
+      backgroundColor:'#1482f0', 
+      width: 6, 
+      height: 6,
+      top: 35,
+    },
+    slide: {
+      flexDirection: 'column',
+      justifyContent: 'center',
+      alignItems: 'center',
+      backgroundColor: '#F2F2F2',
+      height: 170,
+    },
+    slide_image: {
+      top: 10,
+      width:kScreenWidth,
+      height: 180,
+      // flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+    slide_title: {
+      top: -20,
+      fontSize: 16,
+      lineHeight: 21,
+      color: '#ffffff',
     }
 });
