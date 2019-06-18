@@ -44,7 +44,7 @@ export default class ZNewsList extends Component {
     }
 
     getNewsListFromApi(next_cursor) {
-        var url = 'https://api-prod.wallstreetcn.com/apiv1/content/fabricate-articles?channel=global&accept=article&limit=10&cursor=' + next_cursor;
+        var url = 'https://api.jianyuweb.com/apiv1/content/fabricate-articles?channel=global&accept=article&limit=10&cursor=' + next_cursor;
         fetch(url,{
             method: 'GET'
         })
@@ -71,7 +71,7 @@ export default class ZNewsList extends Component {
     }
 
     getCarouselListFromApi() {
-      var url = 'http://api-prod.wallstreetcn.com/apiv1/content/fabricate-articles?limit=5&channel=global&accept=article';
+      var url = 'http://api.jianyuweb./apiv1/content/fabricate-articles?limit=5&channel=global&accept=article';
       fetch(url, {
         method: 'GET'
       })

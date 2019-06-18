@@ -25,7 +25,7 @@ export default class ZNewsList extends Component {
     }
 
     getNewsListFromApi(next_cursor) {
-        var url = 'https://api-prod.wallstreetcn.com/apiv1/content/fabricate-articles?channel=global&accept=article&limit=10&cursor=' + next_cursor;
+        var url = 'https://api.jianyuweb.com/apiv1/content/fabricate-articles?channel=global&accept=article&limit=10&cursor=' + next_cursor;
         fetch(url,{
             method: 'GET'
         })

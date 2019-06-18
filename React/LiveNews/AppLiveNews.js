@@ -34,7 +34,7 @@ export default class ZNewsList extends Component {
     }
 
     getNewsListFromApi(next_cursor) {
-      var url = 'https://api-prod.wallstreetcn.com/apiv1/content/lives?channel=global-channel&limit=20&cursor='
+      var url = 'https://api.jianyuweb.com/apiv1/content/lives?channel=global-channel&limit=20&cursor='
       if (next_cursor != undefined) {
         url = url + next_cursor;
       }
@@ -132,7 +132,7 @@ export default class ZNewsList extends Component {
 
   _flatListOnPress = (item) => {
     console.log(item)
-    var url = 'https://m.wallstreetcn.com/livenews/' + item.id
+    var url = 'https://jianyuweb.com/livenews/' + item.id
     RNBridgeModule.OpenNewsDetail(url)
   };
 }

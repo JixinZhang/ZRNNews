@@ -82,6 +82,7 @@
 -(void)doNotification:(NSNotification *)notification {
     NSLog(@"成功收到===>通知");
     NSString *uri = notification.userInfo[@"uri"];
+    uri = [uri stringByReplacingOccurrencesOfString:@"wallstreetcn.com" withString:@"jianyuweb.com"];
 //    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"成功收到===>通知" message:uri delegate:nil cancelButtonTitle:@"cancel" otherButtonTitles:@"ok", nil];
 //    [alert show];
     
